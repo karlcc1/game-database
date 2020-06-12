@@ -13,7 +13,7 @@ class Game:
         return self.title + ", " + self.genre + ", " + str(self.year) + ", " \
                 + self.developer + ", " + self.publisher + ", " + str(self.completed)
     
-
+#Initial games
 game1 = Game("Resistance: Fall of Man", "FPS", 2006, "Insomniac", "Sony Interactive", False)
 game2 = Game("God of War III", "Adventure", 2010, "SIE", "Sony Computer", False)
 game3 = Game("Far Cry 2", "FPS", 2008, "Ubisoft", "Ubisoft", True)
@@ -26,7 +26,6 @@ games.append(game3)
 games.append(game4)
 
 #Main Menu
-
 def select_menu():
     print("=="*32)
     print("*Game Database")
@@ -54,17 +53,21 @@ def show_games():
     print()
     for g in games:
         print(g)
+    print()
+    print(str(len(games)) + " games total")
     select_menu()
 
-#incomplete
 def add_game():
     print("=="*32)
     print("Add new game . . .")
     print()
-    print("Please type game info in following format [Title, Genre, Year, Developer, Publisher, Completed (boolean)]:")
+    print("Please type game info in following format [Title, Genre, Year, Developer, Publisher, Completed [Y/N]]:")
     new_game = input()
-    #
-    #print("New game added!")
+    new_game2 = new_game.split(", ")
+    game = Game(new_game2[0], new_game2[1], new_game2[2], new_game2[3], new_game2[4], new_game2[5])
+    games.append(game)
+    print()
+    print("New game added!")
     select_menu()
 
 def del_game():
@@ -78,6 +81,9 @@ def del_game():
             games.remove(g)
     print(game_to_del + " has been deleted!")
     select_menu()
+
+def edit_game():
+    
 
 def exit_program():
     print("Goodbye!")
