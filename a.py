@@ -1,5 +1,4 @@
 #Game Database Application
-
 class Game:
     def __init__(self, title, genre, year, developer, publisher, completed):
         self.title = title
@@ -43,6 +42,8 @@ def select_menu():
         add_game()
     elif menu_letter == "C":
         del_game()
+    elif menu_letter == "D":
+        edit_game()
     elif menu_letter == "Z":
         exit_program()
 
@@ -83,11 +84,23 @@ def del_game():
     select_menu()
 
 def edit_game():
-    
+    print("=="*32)
+    print("Edit game . . .")
+    print()
+    game_to_edit = input("Please type game title:")
+    print()
+    edit_form = input("Enter new game details:")
+    print()
+    for g in games:
+        if g.title == game_to_edit:
+            games.remove(g)
+    edit_form2 = edit_form.split(", ")
+    game = Game(edit_form2[0], edit_form2[1], edit_form2[2], edit_form2[3], edit_form2[4], edit_form2[5])
+    games.append(game)
+    print(game_to_edit + " has been edited!")
+    select_menu()
 
 def exit_program():
     print("Goodbye!")
 
 select_menu()
-
-
