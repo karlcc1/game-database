@@ -1,0 +1,4 @@
+Resistance: Fall of Man, FPS, 2006, Insomniac, Sony Interactive, False
+God of War III, Adventure, 2010, SIE, Sony Computer, False
+Assassin's Creed III, Adventure, 2012, Ubisoft, Ubisoft, True
+Far Cry 3, Adventure, 2010, SIE, Sony Computer, False
