@@ -1,10 +1,9 @@
-import os
-clear = lambda: os.system('cls') 
+from tinydb import TinyDB, Query
 
-print("A")
-clear()
-print("B")
-edit_form = input("Enter new game details:")
-clear()
-print("Game added!")
-f = input()
+db = TinyDB('db.json')
+User = Query()
+q1 = db.remove(User.name == 'a')
+if q1:
+    print("q1 is filled")
+else:
+    print("q1 is empty")
