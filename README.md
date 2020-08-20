@@ -1,16 +1,31 @@
 # game_database
 
-A game database application that shows current PS3 games in my collection.
+A simple game database application to display current PS3 games in my collection.
 
-Current features:
-  -show library
-  -add game
-  -delete game
-  -edit game
+I was thinking of keeping track of the games I currently owned. I was using just a .txt file with a list, then an Excel file. So why not build a program?
 
-Next steps:
-  1. Store data in a .txt file so it is saved after runtime.
-  2. Create fluid CLI environment
-  3. Create GUI environment
+I started off with a simple CLI-based program:
 
--karlcc1
+![CLI](/readme_imgs/cli.PNG)
+
+This is just to set up most of the backend and code most of the application's features such as add, edit, and delete.
+File I/O was first implemented through Python's native file read and write. I then used [tinydb](https://tinydb.readthedocs.io/en/stable/) for a more efficient data transfer and usability.
+
+After finishing the CLI, I then moved on to making a simple GUI:
+
+![CLI](/readme_imgs/gui_main.PNG)
+
+I used Python's included Tkinter for the GUI toolkit. It presents the same information as the CLI, but in a much more recognisable (although old-fashioned) interface. Add game is more nicely laid out and easier to follow:
+
+![CLI](/readme_imgs/gui_add.PNG)
+
+Edit game brings up a popup window wich prefills the form so users can edit what they need. Both windows of add and edit has got a cancel button and a message if the input is invalid:
+
+![CLI](/readme_imgs/gui_edit.PNG)
+![CLI](/readme_imgs/gui_err.PNG)
+
+Lastly, the delete button brings up a confirmation window for accidental clicks:
+
+![CLI](/readme_imgs/gui_del.PNG)
+
+I am wishing to add more content and maybe migrate to a more modern GUI toolkit in the future.
