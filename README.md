@@ -19,9 +19,12 @@ I used Python's included Tkinter for the GUI toolkit. It presents the same infor
 
 ![CLI](/readme_imgs/gui_add.PNG)
 
-Edit game brings up a popup window wich prefills the form so users can edit what they need. Both windows of add and edit has got a cancel button and a message if the input is invalid:
+Edit game brings up a popup window wich prefills the form so users can edit what they need:
 
 ![CLI](/readme_imgs/gui_edit.PNG)
+
+Both windows of add and edit has got a cancel button and a message if the input is invalid such as an empty required field:
+
 ![CLI](/readme_imgs/gui_err.PNG)
 
 Lastly, the delete button brings up a confirmation window for accidental clicks:
